@@ -1,0 +1,8 @@
+@import "colors";
+
+body {
+  background-image: linear-gradient(155deg, #276384, #0f5175);
+}
+
+@import "../components/circle/circle";
+@import "../compositions/activity-bar/activity-bar";

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "node-sass": "^4.5.3",
+    "pug": "^2.0.0-rc.3",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "scripts": {
+    "sass:watch": "npm run sass:compile && node_modules/.bin/node-sass src/scss/base.scss --output-style compressed -w dist/css/base.css",
+    "sass:compile": "node_modules/.bin/node-sass src/scss/base.scss --output-style compressed dist/css/base.css",
+    "start:client": "node_modules/.bin/browser-sync start --server ./dist --files ./dist",
+    "serve": "npm run start:client",
+    "pug:compile": "node_modules/.bin/pug src/ --pretty --out dist/",
+    "pug:watch": "node_modules/.bin/pug src/ --watch --pretty --out dist/"
+  }
+}
